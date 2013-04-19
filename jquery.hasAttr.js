@@ -6,7 +6,7 @@
 (function ($) {
   $.fn.hasAttr = function (attrName) {
 		return (this.filter(function(index) {
-			if ( !!$(this).attr(attrName) ) {
+			if ( typeof $(this).attr(attrName) !== undefined ) {
 				return true;
 			}
 			return false;
